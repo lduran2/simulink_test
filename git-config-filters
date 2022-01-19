@@ -13,5 +13,4 @@
 #    v1.0.0 - 2021-01-19t01:53R
 #        combined the `archive` filter
 #
-git config diff.archive.textconv 'unzip -c'
-git config diff.archive.binary true
+git config filter.archive.clean '7z -so e'
