@@ -1,1 +1,2 @@
+*.slx diff=archive
 *.slx filter=archive

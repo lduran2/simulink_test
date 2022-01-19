@@ -10,7 +10,11 @@
 # Version   : 1.0.0
 #
 # CHANGELOG :
-#    v1.0.0 - 2021-01-19t01:53R
-#        combined the `archive` filter
+#    v1.0.0 - 2021-01-19t03:12R
+#        set up the `archive` filter
 #
-git config filter.archive.clean '7z e'
+#    v1.0.0 - 2021-01-19t01:53R
+#        set up the `archive` diff
+#
+git config diff.archive.clean 'unzip -c'
+git config filter.archive.clean 'unzip'
