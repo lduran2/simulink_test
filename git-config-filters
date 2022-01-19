@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# Canonical : https://github.com/lduran2/simulink_test/git-config-filters
+# Configures the filters for compressed files for this project.  The
+# configuration is to unzip the compressed files prior to `diff`ing.
+#
+# By        : Leomar Durán <https://github.com/lduran2/>
+# When      : 2021-01-19t01:53R
+# Where     : Temple University
+# For       : ECE 3413
+# Version   : 1.0.0
+#
+# CHANGELOG :
+#    v1.0.0 - 2021-01-19t01:53R
+#        combined the `archive` filter
+#
+git config diff.archive.textconv 'unzip -c'
+git config diff.archive.binary true
