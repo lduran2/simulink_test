@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Self      : /hooks/unzip_all
+# Decompresses all Simulink models in this repo after pushing to
+# remote.
+# By        : Leomar Duran <https://github.com/lduran2>
+# When      : 2022-01-24t05:55R
+# Version   : 1.1.0
+# 
+# CHANGELOG :
+#	v1.1.0 - 2022-01-24t04:51R
+#		decompresses any file matching patterns from "../.unzip"
+#
+#	v1.0.0 - 2022-01-24t04:51R
+#		decompresses all Simulink models
+#
+
+# configuration file contains the file patterns to unzip
+# relative to the root
+declare -r PATTERN_FILE_FROM_ROOT=".unzip"
+# the path resolved to this script
+declare -r PATTERN_FILE="${BASH_SOURCE%/*}/../$PATTERN_FILE_FROM_ROOT"
+
+# read all lines from the configuration file
+while read PATTERN ; do
+	# if the link is not a comment, accept it as a file pattern
+	if [[ "$PATTERN" != \#* ]] ;
+	then
+		# find each file matching the pattern
+		find . -type f -name "$PATTERN" -printf '%p\n' | 
+			# read the filename into FILE
+			while read FILE ; do
+				echo "$FILE"
+				# unzip to a directory with the same name
+				# sans extension, overwriting any files therein
+				unzip -o "$FILE" -d "${FILE%.*}"
+			done # while read FILE
+		# done find FILE
+	fi # [[ $PATTERN != \#* ]]; then
+done < "$PATTERN_FILE" # while read PATTERN
+
+# confirm finished
+echo "Done."
+
