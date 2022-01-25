@@ -37,7 +37,12 @@ while read PATTERN ; do
 				echo "unzipping file \"$FILE\" . . ."
 				# unzip to a directory with the same name
 				# sans extension, overwriting any files therein
-				unzip -o "$FILE" -d "${FILE%.*}"
+				unzip_dir="${FILE%.*}"
+				unzip -o "$FILE" -d "$unzip_dir"
+				# unadd the file from commit
+				git reset HEAD "$FILE"
+                # add the zipped directory
+                git add "$unzip_dir"
 			done # while read FILE
 		# done find FILE
 	fi # [[ "$PATTERN" != \#* ]]; then
