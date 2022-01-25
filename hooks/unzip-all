@@ -25,8 +25,8 @@ declare -r PATTERN_FILE="$ROOT$PATTERN_FILE_FROM_ROOT"
 # read all lines from the configuration file
 while read RAW_PATTERN ; do
 	# remove surrounding spaces
-    pattern=$("echo \"$RAW_PATTERN\" | xargs")
-    echo "$PATTERN"
+    pattern=$(echo "$RAW_PATTERN" | xargs)
+    echo "$pattern"
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
