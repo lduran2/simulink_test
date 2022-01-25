@@ -1,4 +1,2 @@
-# This file will contain patterns of all files to be unzipped after
-# pushing to remote.
-
-# populate me
+# Simulink models
+*.slx
