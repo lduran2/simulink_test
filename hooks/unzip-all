@@ -23,8 +23,9 @@ declare -r ROOT="${BASH_SOURCE%/*}/../"
 declare -r PATTERN_FILE="$ROOT$PATTERN_FILE_FROM_ROOT"
 
 # read all lines from the configuration file
-while read PATTERN ; do
-    PATTERN='*.slx'
+while read RAW_PATTERN ; do
+	# remove surrounding spaces
+	echo "RAW_PATTERN" | xargs | read PATTERN
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
@@ -46,7 +47,7 @@ while read PATTERN ; do
 			done # while read FILE
 		# done find FILE
 	fi # [[ "$PATTERN" != \#* ]]; then
-done < "$PATTERN_FILE" # while read PATTERN
+done < "$PATTERN_FILE" # while read RAW_PATTERN
 
 # confirm finished
 echo "Done."
