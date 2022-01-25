@@ -28,7 +28,7 @@ while read PATTERN ; do
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
-        echo "unzipping files matching \"${PATTERN%/\r}\" . . ."
+        echo "unzipping files matching \"${PATTERN%/\n}\" . . ."
         find "$ROOT" -type f -name "$PATTERN" -printf '%p\n'
 		# find each file matching the pattern
 		find "$ROOT" -type f -name "$PATTERN" -printf '%p\n' | 
