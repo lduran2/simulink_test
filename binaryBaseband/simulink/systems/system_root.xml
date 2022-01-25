@@ -9,8 +9,8 @@
   <P Name="SIDHighWatermark">7</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Gain" Name="Gain" SID="7">
-    <P Name="Position">[450, 343, 510, 387]</P>
-    <P Name="ZOrder">332</P>
+    <P Name="Position">[850, 303, 910, 347]</P>
+    <P Name="ZOrder">339</P>
     <P Name="Gain">A(2)/Ns</P>
     <Port>
       <P Name="PortNumber">1</P>
@@ -19,8 +19,8 @@
   </Block>
   <Block BlockType="Reference" Name="Integrate&#xA;and Dump" SID="6">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[330, 343, 410, 387]</P>
-    <P Name="ZOrder">331</P>
+    <P Name="Position">[730, 303, 810, 347]</P>
+    <P Name="ZOrder">338</P>
     <P Name="LibraryVersion">1.786</P>
     <P Name="SourceBlock">commfilt2/Integrate
 and Dump</P>
@@ -47,14 +47,14 @@ and Dump</P>
     </InstanceData>
   </Block>
   <Block BlockType="Constant" Name="One" SID="5">
-    <P Name="Position">[260, 350, 290, 380]</P>
-    <P Name="ZOrder">330</P>
+    <P Name="Position">[660, 310, 690, 340]</P>
+    <P Name="ZOrder">337</P>
     <P Name="OutDataTypeStr">Inherit: Inherit via back propagation</P>
   </Block>
   <Block BlockType="Product" Name="Product" SID="4">
     <P Name="Ports">[2, 1]</P>
-    <P Name="Position">[355, 267, 385, 298]</P>
-    <P Name="ZOrder">329</P>
+    <P Name="Position">[755, 227, 785, 258]</P>
+    <P Name="ZOrder">336</P>
     <Port>
       <P Name="PortNumber">1</P>
       <P Name="Name">s1(t)</P>
@@ -62,8 +62,8 @@ and Dump</P>
   </Block>
   <Block BlockType="Reference" Name="Random Integer&#xA;Generator" SID="1">
     <P Name="Ports">[0, 1]</P>
-    <P Name="Position">[235, 187, 315, 233]</P>
-    <P Name="ZOrder">326</P>
+    <P Name="Position">[635, 147, 715, 193]</P>
+    <P Name="ZOrder">333</P>
     <P Name="LibraryVersion">11.0</P>
     <P Name="SourceBlock">commrandsrc3/Random Integer
 Generator</P>
@@ -85,66 +85,66 @@ Generator</P>
   </Block>
   <Block BlockType="Scope" Name="Scope" SID="2">
     <P Name="Ports">[3]</P>
-    <P Name="Position">[585, 203, 615, 237]</P>
-    <P Name="ZOrder">327</P>
+    <P Name="Position">[985, 163, 1015, 197]</P>
+    <P Name="ZOrder">334</P>
     <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-0.5&apos;,&apos;MaxYLimReal&apos;,&apos;4.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;4.5&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,3,&apos;LineNames&apos;,{{&apos;ctrl&apos;,&apos;s1(t)&apos;,&apos;s2(t)&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;-0.5&apos;,&apos;MaxYLimReal&apos;,&apos;4.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;4.5&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;PreviousAutoscale&apos;,&apos;XY&apos;),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2020b&apos;)),&apos;Version&apos;,&apos;2020b&apos;)</P>
     <P Name="NumInputPorts">3</P>
     <P Name="Floating">off</P>
   </Block>
   <Block BlockType="Sin" Name="Sine Wave" SID="3">
     <P Name="Ports">[0, 1]</P>
-    <P Name="Position">[260, 275, 290, 305]</P>
-    <P Name="ZOrder">328</P>
+    <P Name="Position">[660, 235, 690, 265]</P>
+    <P Name="ZOrder">335</P>
     <P Name="SineType">Sample based</P>
     <P Name="Amplitude">sqrt(A(1))</P>
     <P Name="Samples">2*Ns</P>
     <P Name="SampleTime">Ts</P>
   </Block>
   <Line>
-    <P Name="ZOrder">65</P>
-    <P Name="Src">3#out:1</P>
-    <P Name="Points">[38, 0]</P>
-    <Branch>
-      <P Name="ZOrder">64</P>
-      <P Name="Points">[0, -15]</P>
-      <P Name="Dst">4#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">63</P>
-      <P Name="Dst">4#in:2</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">66</P>
+    <P Name="ZOrder">71</P>
     <P Name="Src">5#out:1</P>
     <P Name="Dst">6#in:1</P>
   </Line>
   <Line>
+    <P Name="Name">s2(t)</P>
+    <P Name="ZOrder">72</P>
+    <P Name="Labels">[2, 1]</P>
+    <P Name="Src">7#out:1</P>
+    <P Name="Points">[33, 0; 0, -135]</P>
+    <P Name="Dst">2#in:3</P>
+  </Line>
+  <Line>
     <P Name="Name">s1(t)</P>
-    <P Name="ZOrder">67</P>
+    <P Name="ZOrder">73</P>
     <P Name="Labels">[2, 1]</P>
     <P Name="Src">4#out:1</P>
     <P Name="Points">[95, 0; 0, -65]</P>
     <P Name="Dst">2#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">68</P>
-    <P Name="Src">6#out:1</P>
-    <P Name="Dst">7#in:1</P>
+    <P Name="ZOrder">76</P>
+    <P Name="Src">3#out:1</P>
+    <P Name="Points">[38, 0]</P>
+    <Branch>
+      <P Name="ZOrder">75</P>
+      <P Name="Points">[0, -15]</P>
+      <P Name="Dst">4#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">74</P>
+      <P Name="Dst">4#in:2</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="Name">ctrl</P>
-    <P Name="ZOrder">69</P>
+    <P Name="ZOrder">77</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">1#out:1</P>
     <P Name="Dst">2#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">s2(t)</P>
-    <P Name="ZOrder">70</P>
-    <P Name="Labels">[2, 1]</P>
-    <P Name="Src">7#out:1</P>
-    <P Name="Points">[33, 0; 0, -135]</P>
-    <P Name="Dst">2#in:3</P>
+    <P Name="ZOrder">78</P>
+    <P Name="Src">6#out:1</P>
+    <P Name="Dst">7#in:1</P>
   </Line>
 </System>
