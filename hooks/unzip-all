@@ -27,6 +27,7 @@ while read RAW_PATTERN ; do
 	# remove surrounding spaces
 	echo "$RAW_PATTERN" | xargs | read PATTERN
     echo "$RAW_PATTERN"
+    echo "$RAW_PATTERN" | xargs
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
