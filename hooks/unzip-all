@@ -26,7 +26,7 @@ declare -r PATTERN_FILE="$ROOT$PATTERN_FILE_FROM_ROOT"
 while read RAW_PATTERN ; do
 	# remove surrounding spaces
 	echo "$RAW_PATTERN" | xargs | read PATTERN
-    echo $PATTERN
+    echo "$PATTERN_FILE"
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
