@@ -28,6 +28,7 @@ while read RAW_PATTERN ; do
 	echo "$RAW_PATTERN" | xargs | read PATTERN
     echo "$RAW_PATTERN"
     echo "$RAW_PATTERN" | xargs
+    echo "$PATTERN"
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
