@@ -24,11 +24,11 @@ declare -r PATTERN_FILE="$ROOT$PATTERN_FILE_FROM_ROOT"
 
 # read all lines from the configuration file
 while read PATTERN ; do
-    PATTERN="${PATTERN%/\r}"
+    PATTERN='*.slx'
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
-        echo "unzipping files matching \"${PATTERN%/\n}\" . . ."
+        echo "unzipping files matching \"${PATTERN%/\r}\" . . ."
         find "$ROOT" -type f -name "$PATTERN" -printf '%p\n'
 		# find each file matching the pattern
 		find "$ROOT" -type f -name "$PATTERN" -printf '%p\n' | 
