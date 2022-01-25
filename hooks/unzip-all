@@ -25,6 +25,7 @@ echo "$self"
 declare -r PATTERN_FILE="${self%/*}/../$PATTERN_FILE_FROM_ROOT"
 echo '$BASH_SOURCE'
 echo "${BASH_SOURCE%/*}"
+echo "${BASH_SOURCE%/*}/../$PATTERN_FILE_FROM_ROOT"
 
 # read all lines from the configuration file
 while read PATTERN ; do
