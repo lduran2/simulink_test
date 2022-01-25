@@ -17,8 +17,10 @@
 # configuration file contains the file patterns to unzip
 # relative to the root
 declare -r PATTERN_FILE_FROM_ROOT='.unzip'
+ls "$BASH_SOURCE%" | read self
 # the path resolved to this script
-declare -r PATTERN_FILE="${BASH_SOURCE%/*}/../$PATTERN_FILE_FROM_ROOT"
+declare -r PATTERN_FILE="${self%/*}/../$PATTERN_FILE_FROM_ROOT"
+echo "$PATTERN_FILE"
 
 # read all lines from the configuration file
 while read PATTERN ; do
