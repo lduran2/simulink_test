@@ -25,11 +25,12 @@ while read PATTERN ; do
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$PATTERN" != \#* ]] ;
 	then
+        echo "unzipping files matching \"$PATTERN\" . . ."
 		# find each file matching the pattern
 		find . -type f -name "$PATTERN" -printf '%p\n' | 
 			# read the filename into FILE
 			while read FILE ; do
-				echo "$FILE"
+				echo "unzipping file \"$FILE\" . . ."
 				# unzip to a directory with the same name
 				# sans extension, overwriting any files therein
 				unzip -o "$FILE" -d "${FILE%.*}"
