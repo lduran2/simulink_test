@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Canonical : https://github.com/lduran2/git-unzip-all/git-config-hook-unzip-all
+# Configure the pre-commit hook to run hooks/unzip-all.
+# By        : Leomar Duran <https://github.com/lduran2>
+# When      : 2022-01-25t06:40R
+# Version   : 1.0.0
+# 
+# CHANGELOG :
+#   v1.0.0 - 2022-01-24t04:51R
+#       decompresses all Simulink models
+#
+
+# hook file to which to attach
+declare -r HOOK_FILE='.git/hooks/pre-commit'
+
+# if the file does not exist
+if [[ ! -f $HOOK_FILE ]] ;
+then
+    cat < hooks/components/header > $HOOK_FILE
+fi # [[ ! -f $HOOK_FILE ]]
+
+# always add the hook that attaches `. hooks/unzip-all`
+cat < hooks/components/source-unzip-all >> $HOOK_FILE
