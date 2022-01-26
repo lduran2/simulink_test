@@ -42,7 +42,7 @@ while read SPACE_PATTERN ; do
 				# unzip to a directory with the same name
 				# sans extension, overwriting any files therein
 				unzip_dir="${FILE%.*}"
-				unzip -vo "$FILE" -d "$unzip_dir"
+				unzip -o "$FILE" -d "$unzip_dir"
 				# unadd the file from commit
 				git reset HEAD "$FILE"
 				# add the zipped directory
