@@ -3,15 +3,19 @@
 # Decompresses all Simulink models in this repo after pushing to
 # remote.
 # By        : Leomar Duran <https://github.com/lduran2>
-# When      : 2022-01-24t05:55R
-# Version   : 1.1.0
+# When      : 2022-01-25t06:40R
+# Version   : 1.2.0
 # 
 # CHANGELOG :
-#	v1.1.0 - 2022-01-24t04:51R
-#		decompresses any file matching patterns from "../.unzip"
+#   v1.2.0 - 2022-01-25t06:40R
+#       trim spaces from patterns; root constant, progress message,
+#           verbose unzip
 #
-#	v1.0.0 - 2022-01-24t04:51R
-#		decompresses all Simulink models
+#   v1.1.0 - 2022-01-24t04:51R
+#       decompresses any file matching patterns from "../.unzip"
+#
+#   v1.0.0 - 2022-01-24t04:51R
+#       decompresses all Simulink models
 #
 
 # configuration file contains the file patterns to unzip
@@ -25,12 +29,11 @@ declare -r PATTERN_FILE="$ROOT$PATTERN_FILE_FROM_ROOT"
 # read all lines from the configuration file
 while read SPACE_PATTERN ; do
 	# remove surrounding spaces
-    pattern=$(echo "$SPACE_PATTERN" | xargs)
+	pattern=$(echo "$SPACE_PATTERN" | xargs)
 	# if the link is not a comment, accept it as a file pattern
 	if [[ "$pattern" != \#* ]] ;
 	then
-        echo "unzipping files matching \"${pattern%/\r}\" . . ."
-        find "$ROOT" -type f -name "$pattern" -printf '%p\n'
+		echo "unzipping files matching \"${pattern%/\r}\" . . ."
 		# find each file matching the pattern
 		find "$ROOT" -type f -name "$pattern" -printf '%p\n' | 
 			# read the filename into FILE
@@ -39,11 +42,11 @@ while read SPACE_PATTERN ; do
 				# unzip to a directory with the same name
 				# sans extension, overwriting any files therein
 				unzip_dir="${FILE%.*}"
-				unzip -o "$FILE" -d "$unzip_dir"
+				unzip -vo "$FILE" -d "$unzip_dir"
 				# unadd the file from commit
 				git reset HEAD "$FILE"
-                # add the zipped directory
-                git add "$unzip_dir"
+				# add the zipped directory
+				git add "$unzip_dir"
 			done # while read FILE
 		# done find FILE
 	fi # [[ "$pattern" != \#* ]]; then
