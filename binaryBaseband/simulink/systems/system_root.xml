@@ -83,25 +83,6 @@ Generator</P>
       <P Name="Name">ctrl</P>
     </Port>
   </Block>
-  <Block BlockType="Reference" Name="Random Integer&#xA;Generator1" SID="8">
-    <P Name="Ports">[0, 1]</P>
-    <P Name="Position">[515, 147, 595, 193]</P>
-    <P Name="ZOrder">347</P>
-    <P Name="LibraryVersion">11.0</P>
-    <P Name="SourceBlock">commrandsrc3/Random Integer
-Generator</P>
-    <P Name="SourceType">Random Integer Generator</P>
-    <P Name="SourceProductBaseCode">CM</P>
-    <InstanceData>
-      <P Name="SetSize">8</P>
-      <P Name="SeedSource">Auto</P>
-      <P Name="Seed">0</P>
-      <P Name="SampleTime">1</P>
-      <P Name="SamplesPerFrame">1</P>
-      <P Name="OutputDataType">double</P>
-      <P Name="SimulateUsing">Interpreted execution</P>
-    </InstanceData>
-  </Block>
   <Block BlockType="Scope" Name="Scope" SID="2">
     <P Name="Ports">[3]</P>
     <P Name="Position">[1000, 178, 1030, 212]</P>

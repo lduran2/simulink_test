@@ -22,8 +22,8 @@
       <P Name="UpdateHistory">UpdateHistoryNever</P>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">565041667</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.15&gt;</P>
+      <P Name="RTWModifiedTimeStamp">565041792</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.16&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="SampleTimeColors">off</P>
